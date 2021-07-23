@@ -245,6 +245,7 @@ GameObject:
   - component: {fileID: 6703125390895891408}
   - component: {fileID: 6670809608777602893}
   - component: {fileID: 1580510412006047333}
+  - component: {fileID: 1795944731}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -562,6 +563,18 @@ MonoBehaviour:
   canReverseText: {fileID: 0}
   timeBetweenPositionTracking: 0.1
   startReverseTime: 1
+--- !u!114 &1795944731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6671321904004607766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3320503c24d04e742bfb723206e85323, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6671809769120853842
 GameObject:
   m_ObjectHideFlags: 0
