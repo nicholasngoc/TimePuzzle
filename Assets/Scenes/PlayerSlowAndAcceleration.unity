@@ -231,6 +231,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 175e89cc417a048478e53fa67b209fb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &189841813 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6703125390895891408, guid: b0b463312172bb549b184c2b4279d875, type: 3}
+  m_PrefabInstance: {fileID: 1975102344}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf1a5ad4f9ffb154ca7813fdad11017a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &436387659
 GameObject:
   m_ObjectHideFlags: 0
@@ -936,6 +947,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1795944731, guid: b0b463312172bb549b184c2b4279d875, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 189841813}
     - target: {fileID: 1580510412006047333, guid: b0b463312172bb549b184c2b4279d875, type: 3}
       propertyPath: canReverseText
       value: 

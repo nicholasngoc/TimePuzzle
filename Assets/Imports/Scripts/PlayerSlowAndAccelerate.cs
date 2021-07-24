@@ -8,6 +8,9 @@ using UnityEngine;
 /// </summary>
 public class PlayerSlowAndAccelerate : MonoBehaviour
 {
+    public FirstPersonAIO playerMovement;
+
+    private float originalWalkSpeed;
     private float fixedDeltaTime;
 
     /// <summary>
@@ -15,6 +18,7 @@ public class PlayerSlowAndAccelerate : MonoBehaviour
     /// </summary>
     private void Awake()
     {
+        originalWalkSpeed = playerMovement.walkSpeed;
         this.fixedDeltaTime = Time.fixedDeltaTime;
     }
 
@@ -48,5 +52,7 @@ public class PlayerSlowAndAccelerate : MonoBehaviour
         Time.timeScale = newTimeScale;
         // This changes physics differently.
         Time.fixedDeltaTime = this.fixedDeltaTime * Time.timeScale;
+        // This is used to keep the player's speed constant no matter how slow or fast the environment is.
+        playerMovement.walkSpeed = originalWalkSpeed / newTimeScale;
     }
 }
