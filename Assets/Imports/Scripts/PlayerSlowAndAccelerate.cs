@@ -8,15 +8,45 @@ using UnityEngine;
 /// </summary>
 public class PlayerSlowAndAccelerate : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private float fixedDeltaTime;
+
+    /// <summary>
+    /// Store the default fixed delta time that's 0.02f at the start of the scene.
+    /// </summary>
+    private void Awake()
     {
-        
+        this.fixedDeltaTime = Time.fixedDeltaTime;
     }
 
-    // Update is called once per frame
-    void Update()
+    /// <summary>
+    /// Check at the end of every frame for the player to change the time scale.
+    /// </summary>
+    void LateUpdate()
     {
-        
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            ChangeTimeScale(0.5f);
+        }
+
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            ChangeTimeScale(2.0f);
+        }
+
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            ChangeTimeScale(1.0f);
+        }
+    }
+
+    /// <summary>
+    /// Changes the time scale to slow or accelerate the scene.
+    /// </summary>
+    /// <param name="newTimeScale">The new time scale number.</param>
+    private void ChangeTimeScale(float newTimeScale)
+    {
+        Time.timeScale = newTimeScale;
+        // This changes physics differently.
+        Time.fixedDeltaTime = this.fixedDeltaTime * Time.timeScale;
     }
 }

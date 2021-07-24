@@ -8,7 +8,9 @@ using UnityEngine;
 /// </summary>
 public class Rotate : MonoBehaviour
 {
-    // Update is called once per frame
+    /// <summary>
+    /// Rotate the object at a certain angle.
+    /// </summary>
     void FixedUpdate()
     {
         this.gameObject.transform.Rotate(new Vector3(0.5f, 1.0f, 1.5f));
